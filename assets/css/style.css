@@ -170,12 +170,57 @@ img {
   gap: 10px;
 }
 
+.scene-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 0 8px;
+  justify-content: center;
+}
+
+.scene-nav a {
+  font-family: "DotGothic16", sans-serif;
+  background: var(--ui-dark);
+  color: var(--ui-light);
+  border: 3px solid var(--ui-light);
+  border-radius: 999px;
+  padding: 6px 14px;
+  box-shadow: var(--pixel-shadow);
+  letter-spacing: 0.06em;
+}
+
+.scene-nav a:hover {
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
 .hero {
   padding: 72px 0 74px;
   background: linear-gradient(140deg, #23406f 0%, #4aa3ff 55%, #7fdfff 100%);
   color: var(--white);
   position: relative;
   overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  scroll-margin-top: 120px;
+}
+
+.scene::before {
+  content: attr(data-scene);
+  position: absolute;
+  top: -16px;
+  left: 16px;
+  font-family: "DotGothic16", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  background: var(--ui-dark);
+  color: var(--ui-light);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 2px solid var(--ui-light);
+  box-shadow: var(--pixel-shadow);
 }
 
 .hero::after {

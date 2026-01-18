@@ -39,7 +39,12 @@
   </header>
 
   <main id="main">
-    <section class="page-hero">
+    <nav class="scene-nav" aria-label="シーン切替">
+      <a href="#scene-1">SCENE 1</a>
+      <a href="#scene-2">SCENE 2</a>
+      <a href="#scene-3">SCENE 3</a>
+    </nav>
+    <section class="page-hero scene" id="scene-1" data-scene="SCENE 1">
       <div class="container">
         <nav class="breadcrumb" aria-label="パンくず">
           <a href="../index.html">ホーム</a> / 仕事と人
@@ -49,7 +54,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section scene" id="scene-2" data-scene="SCENE 2">
       <div class="container split">
         <div>
           <div class="section-title">
@@ -69,7 +74,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section scene" id="scene-3" data-scene="SCENE 3">
       <div class="container">
         <div class="section-title">
           <h2>職種紹介</h2>
