@@ -289,6 +289,63 @@ img {
   display: block;
 }
 
+.route-panels {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.route-panel {
+  display: none;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.route-title {
+  font-family: "DotGothic16", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.route-map {
+  display: grid;
+  gap: 10px;
+}
+
+.route-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+
+.route-step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--ui-accent);
+  color: var(--ui-dark);
+  font-weight: 800;
+}
+
+.route-step strong {
+  color: var(--ui-accent);
+}
+
+#choice-1:checked ~ .route-panels #route-1,
+#choice-2:checked ~ .route-panels #route-2,
+#choice-3:checked ~ .route-panels #route-3 {
+  display: block;
+}
+
 .hero {
   padding: 72px 0 74px;
   background: linear-gradient(140deg, #23406f 0%, #4aa3ff 55%, #7fdfff 100%);
