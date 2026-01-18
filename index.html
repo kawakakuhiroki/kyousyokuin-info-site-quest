@@ -95,22 +95,22 @@
           <p>ステージを進めるように、会社の魅力を体験できます。</p>
         </div>
         <div class="card-grid">
-          <article class="card">
+          <article class="card route-card" data-route="route-1">
             <h3>STAGE 1｜会社の物語</h3>
             <p>会社概要・沿革・理念など、私たちの土台を知るステージです。</p>
             <a class="button outline" href="about/index.html">会社案内へ</a>
           </article>
-          <article class="card">
+          <article class="card route-card" data-route="route-2">
             <h3>STAGE 2｜事業とシステム</h3>
             <p>契約管理・支払管理など、共済制度の中核を支える事業を紹介します。</p>
             <a class="button outline" href="services/index.html">事業・サービスへ</a>
           </article>
-          <article class="card">
+          <article class="card route-card" data-route="route-1">
             <h3>STAGE 3｜取り組み</h3>
             <p>品質・セキュリティ・社会性の取り組みで、信頼を守る姿勢をお伝えします。</p>
             <a class="button outline" href="initiatives/index.html">取り組みへ</a>
           </article>
-          <article class="card">
+          <article class="card route-card" data-route="route-3">
             <h3>STAGE 4｜人と育成</h3>
             <p>採用情報と育成方針を通じて、働く環境や成長の道を紹介します。</p>
             <a class="button outline" href="careers/index.html">仕事と人へ</a>
@@ -123,11 +123,11 @@
           </div>
           <div class="dialog-text">どのルートで会社を知りますか？</div>
           <div class="dialog-choices">
-            <input type="radio" name="choice" id="choice-1" checked>
+            <input type="radio" name="choice" id="choice-1" data-route="route-1" checked>
             <label for="choice-1">信頼の仕組みを知る</label>
-            <input type="radio" name="choice" id="choice-2">
+            <input type="radio" name="choice" id="choice-2" data-route="route-2">
             <label for="choice-2">事業の中核を知る</label>
-            <input type="radio" name="choice" id="choice-3">
+            <input type="radio" name="choice" id="choice-3" data-route="route-3">
             <label for="choice-3">人と育成を知る</label>
           </div>
           <div class="dialog-panels">
@@ -139,25 +139,25 @@
             <div class="route-panel" id="route-1">
               <div class="route-title">ROUTE A｜信頼ルート</div>
               <div class="route-map">
-                <div class="route-step"><span>1</span> 品質・セキュリティを確認</div>
-                <div class="route-step"><span>2</span> 取り組みページへ</div>
-                <div class="route-step"><span>3</span> パートナー向け情報へ</div>
+                <div class="route-step" data-route="route-1"><span>1</span> 品質・セキュリティを確認</div>
+                <div class="route-step" data-route="route-1"><span>2</span> 取り組みページへ</div>
+                <div class="route-step" data-route="route-1"><span>3</span> パートナー向け情報へ</div>
               </div>
             </div>
             <div class="route-panel" id="route-2">
               <div class="route-title">ROUTE B｜事業ルート</div>
               <div class="route-map">
-                <div class="route-step"><span>1</span> 共済システムの中核</div>
-                <div class="route-step"><span>2</span> サービス詳細を確認</div>
-                <div class="route-step"><span>3</span> お問い合わせへ</div>
+                <div class="route-step" data-route="route-2"><span>1</span> 共済システムの中核</div>
+                <div class="route-step" data-route="route-2"><span>2</span> サービス詳細を確認</div>
+                <div class="route-step" data-route="route-2"><span>3</span> お問い合わせへ</div>
               </div>
             </div>
             <div class="route-panel" id="route-3">
               <div class="route-title">ROUTE C｜人材ルート</div>
               <div class="route-map">
-                <div class="route-step"><span>1</span> 育成ステージを確認</div>
-                <div class="route-step"><span>2</span> 仕事と人ページへ</div>
-                <div class="route-step"><span>3</span> 採用情報へ進む</div>
+                <div class="route-step" data-route="route-3"><span>1</span> 育成ステージを確認</div>
+                <div class="route-step" data-route="route-3"><span>2</span> 仕事と人ページへ</div>
+                <div class="route-step" data-route="route-3"><span>3</span> 採用情報へ進む</div>
               </div>
             </div>
           </div>
@@ -258,5 +258,6 @@
       <div class="copyright">© 2026 教職員共済情報サービス株式会社</div>
     </div>
   </footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

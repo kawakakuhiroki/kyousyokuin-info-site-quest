@@ -303,6 +303,11 @@ img {
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
+.route-panel.is-active {
+  display: block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+
 .route-title {
   font-family: "DotGothic16", sans-serif;
   font-size: 0.9rem;
@@ -324,6 +329,10 @@ img {
   border-radius: 10px;
 }
 
+.route-step.is-active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 .route-step span {
   display: inline-flex;
   align-items: center;
@@ -338,6 +347,12 @@ img {
 
 .route-step strong {
   color: var(--ui-accent);
+}
+
+.route-card.is-active {
+  border-color: var(--ui-accent);
+  box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.4), var(--pixel-shadow);
+  transform: translateY(-6px);
 }
 
 #choice-1:checked ~ .route-panels #route-1,
