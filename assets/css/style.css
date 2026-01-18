@@ -194,6 +194,101 @@ img {
   transform: translateY(-2px);
 }
 
+.dialog-box {
+  background: var(--ui-mid);
+  color: var(--ui-light);
+  border-radius: var(--radius);
+  padding: 22px;
+  border: 4px solid var(--ui-light);
+  box-shadow: var(--pixel-shadow);
+}
+
+.dialog-box .npc {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.dialog-box .npc-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ffd166, #ff8fb1);
+  border: 3px solid var(--ui-light);
+  box-shadow: var(--pixel-shadow);
+}
+
+.dialog-box .npc-name {
+  font-family: "DotGothic16", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.dialog-text {
+  position: relative;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.dialog-text::after {
+  content: "▌";
+  margin-left: 6px;
+  animation: blink 1.1s steps(2, start) infinite;
+}
+
+.dialog-choices {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.dialog-choices input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dialog-choices label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--ui-light);
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dialog-choices label:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.dialog-panels {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.dialog-panel {
+  display: none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+#choice-1:checked ~ .dialog-panels #panel-1,
+#choice-2:checked ~ .dialog-panels #panel-2,
+#choice-3:checked ~ .dialog-panels #panel-3 {
+  display: block;
+}
+
 .hero {
   padding: 72px 0 74px;
   background: linear-gradient(140deg, #23406f 0%, #4aa3ff 55%, #7fdfff 100%);
@@ -774,6 +869,16 @@ textarea {
   }
   50% {
     transform: skewX(-8deg);
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
   }
 }
 

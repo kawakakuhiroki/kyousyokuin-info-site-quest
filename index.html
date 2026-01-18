@@ -88,7 +88,7 @@
       </div>
     </section>
 
-    <section class="section scene" id="world" data-scene="SCENE 2">
+    <section class="section scene" id="scene-2" data-scene="SCENE 2">
       <div class="container">
         <div class="section-title">
           <h2>ワールドマップ</h2>
@@ -115,6 +115,26 @@
             <p>採用情報と育成方針を通じて、働く環境や成長の道を紹介します。</p>
             <a class="button outline" href="careers/index.html">仕事と人へ</a>
           </article>
+        </div>
+        <div class="dialog-box" style="margin-top:24px;">
+          <div class="npc">
+            <div class="npc-icon" aria-hidden="true"></div>
+            <div class="npc-name">案内役 NPC</div>
+          </div>
+          <div class="dialog-text">どのルートで会社を知りますか？</div>
+          <div class="dialog-choices">
+            <input type="radio" name="choice" id="choice-1" checked>
+            <label for="choice-1">信頼の仕組みを知る</label>
+            <input type="radio" name="choice" id="choice-2">
+            <label for="choice-2">事業の中核を知る</label>
+            <input type="radio" name="choice" id="choice-3">
+            <label for="choice-3">人と育成を知る</label>
+          </div>
+          <div class="dialog-panels">
+            <div class="dialog-panel" id="panel-1">品質・セキュリティの取り組みへ進みます。</div>
+            <div class="dialog-panel" id="panel-2">共済システムの役割を紹介します。</div>
+            <div class="dialog-panel" id="panel-3">育成と働き方のステージへ進みます。</div>
+          </div>
         </div>
       </div>
     </section>
