@@ -497,6 +497,20 @@ img {
   opacity: 0.4;
 }
 
+.map-lane .lane-runner {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #ffd166, #ff8fb1);
+  border: 3px solid var(--ui-light);
+  box-shadow: var(--pixel-shadow);
+  opacity: 0.6;
+}
+
 .map-lane.is-active {
   border-color: var(--ui-accent);
   background: rgba(255, 255, 255, 0.2);
@@ -510,6 +524,11 @@ img {
 .map-lane.is-active .lane-orb {
   opacity: 1;
   animation: orbPulse 2.2s ease-in-out infinite;
+}
+
+.map-lane.is-active .lane-runner {
+  opacity: 1;
+  animation: runnerMove 3.2s ease-in-out infinite;
 }
 
 .hero-visual {
@@ -1024,6 +1043,18 @@ textarea {
   }
   50% {
     transform: translateY(-50%) scale(1.25);
+  }
+}
+
+@keyframes runnerMove {
+  0% {
+    transform: translate(0, -50%);
+  }
+  50% {
+    transform: translate(120px, -50%);
+  }
+  100% {
+    transform: translate(0, -50%);
   }
 }
 
