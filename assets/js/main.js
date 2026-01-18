@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const routePanels = document.querySelectorAll(".route-panel");
   const routeCards = document.querySelectorAll(".route-card");
   const routeSteps = document.querySelectorAll(".route-step");
+  const soundChip = document.querySelector("[data-sound-chip]");
+  const soundMap = {
+    "route-1": "守護のテーマ",
+    "route-2": "冒険のテーマ",
+    "route-3": "仲間のテーマ",
+  };
 
   const applyRoute = (route) => {
     if (!route) return;
@@ -18,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
     routeSteps.forEach((step) => {
       step.classList.toggle("is-active", step.dataset.route === route);
     });
+    if (soundChip) {
+      soundChip.textContent = `♪ BGM: ${soundMap[route] || "旅立ちのテーマ"}`;
+    }
   };
 
   radios.forEach((radio) => {

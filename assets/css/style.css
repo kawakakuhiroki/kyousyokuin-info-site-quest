@@ -983,3 +983,63 @@ textarea {
     padding: 26px;
   }
 }
+
+/* --- Dynamic route theme overrides (JS) --- */
+body[data-route="route-1"] {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 16px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 16px),
+    linear-gradient(180deg, #9ad7ff 0 260px, #7bd1ff 260px 100%);
+}
+
+body[data-route="route-2"] {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 16px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 16px),
+    linear-gradient(180deg, #90c2ff 0 260px, #5bd6a2 260px 100%);
+}
+
+body[data-route="route-3"] {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 16px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.35) 0 1px, transparent 1px 16px),
+    linear-gradient(180deg, #8fd6ff 0 260px, #7be07b 260px 100%);
+}
+
+body[data-route="route-2"] .hero {
+  background: linear-gradient(140deg, #203566 0%, #35d1c0 45%, #7fdfff 100%);
+}
+
+body[data-route="route-3"] .hero {
+  background: linear-gradient(140deg, #2d4b8a 0%, #ff8fb1 40%, #ffd166 100%);
+}
+
+.sound-chip {
+  max-width: 360px;
+  margin: 0 auto 10px;
+  background: var(--ui-dark);
+  color: var(--ui-light);
+  border: 3px solid var(--ui-light);
+  border-radius: 999px;
+  padding: 6px 14px;
+  box-shadow: var(--pixel-shadow);
+  font-family: "DotGothic16", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.route-panel.is-active {
+  display: block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+
+.route-step.is-active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.route-card.is-active {
+  border-color: var(--ui-accent);
+  box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.4), var(--pixel-shadow);
+  transform: translateY(-6px);
+}
