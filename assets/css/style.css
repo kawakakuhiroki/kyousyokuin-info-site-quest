@@ -1211,3 +1211,8 @@ body[data-route="route-3"] .hero {
   box-shadow: 0 0 0 3px rgba(255, 209, 102, 0.4), var(--pixel-shadow);
   transform: translateY(-6px);
 }
+
+/* Disable SCENE labels */
+.scene::before {
+  content: none !important;
+}
